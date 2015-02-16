@@ -1,0 +1,55 @@
+* Modules
+** Parser/fetcher requests-responses
+   IN: log? traffic
+   OUT: [Request]
+** SmartyPaths
+   IN: [Request]
+   OUT: [Request]  with added smart_path
+** lint
+   IN: [Request]
+   OUT: [Request] with attached errors
+** Outputter
+   IN: [Request]
+   OUT: errors grouped by smart_path
+
+* Classes
+** Request
+   - path
+** Response
+** Check
+*** Individuals Request
+    - [[file:http-api-design.md::####%20Return%20appropriate%20status%20codes][Return appropriate status codes]]
+    - [[file:http-api-design.md::####%20Provide%20full%20resources%20where%20available][Provide full resources on 200 and 201 in PUT PATCH & DELETE but not on 202]]
+    - [[file:http-api-design.md::####%20Accept%20serialized%20JSON%20in%20request%20bodies][Accept json in post bodies instead of form-encoded]]
+    - [[file:http-api-design.md::####%20Downcase%20paths%20and%20attributes][Downcase paths]]
+    - [[file:http-api-design.md::####%20Minimize%20path%20nesting][Minimize path nesting]]
+*** Individuals Response
+    - [[https://github.com/3scale/system/pull/3428][Provide resource UUID]]
+    - [[file:http-api-design.md::####%20Provide%20standard%20timestamps][Timestamps (created_at , updated_at)]]
+    - [[file:http-api-design.md::####%20Use%20UTC%20times%20formatted%20in%20ISO8601][UTC Timestamps]]
+    - [[file:http-api-design.md::####%20Nest%20foreign%20key%20relations][Nest foreign keys]]
+    - [[file:http-api-design.md::####%20Generate%20structured%20errors][Structured errors]]
+    - [[file:http-api-design.md::####%20Show%20rate%20limit%20status][Show ratelimit status]]
+    - [[file:http-api-design.md::####%20Keep%20JSON%20minified%20in%20all%20responses][Minified json]]
+
+*** Globals (automatic)
+    - Versioning in headers
+    - Require secure connection
+    - Etags
+    - Request Id's for every call
+    - json/xml
+
+*** Globals (manual)
+    - Human-readable docs
+    - API Stability. Production, development, beta.
+
+*** Active checks
+    - Override POST with X-Override-Method: PATCH
+    - parameter 'fields' that says which fields are going to be returned
+    - Accept a parameter 'pretty' = true . to prettify
+
+*** Advanced
+    - [[file:http-api-design.md::####%20Divide%20Large%20Responses%20Across%20Requests%20with%20Ranges][Divide large responses]]
+    - [[file:http-api-design.md::#####%20Resource%20names][Plurals vs singulars in resources]] (with )
+    - [[file:http-api-design.md::#####%20Actions][Actions in resources]]
+    - Check for Authentication headers
