@@ -19,8 +19,8 @@ module Apilint
       raise "foo"
     end
 
-    def add_offense(obj, attr)
-      offenses << Offense.new(obj, attr, message)
+    def add_offense(smart_path, obj, attr)
+      offenses << Offense.new(smart_path, obj, attr, message)
     end
 
     def message

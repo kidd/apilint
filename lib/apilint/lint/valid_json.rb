@@ -10,7 +10,7 @@ module Apilint
         begin
           JSON.parse(response.body)
         rescue JSON::ParserError => e
-          add_offense(response, :body)
+          add_offense(request.smart_path, response, :body)
         end
       end
 

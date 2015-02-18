@@ -13,7 +13,7 @@ module Apilint
                  }
 
         unless rules[_response.code].call  #return true if it contains resource
-          add_offense(_response, :body)
+          add_offense(request.smart_path, _response, :body)
         end
 
       end

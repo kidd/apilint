@@ -7,7 +7,7 @@ module Apilint
 
       def check(request, _response)
         return if request.uri.split("/").size <= 3
-        add_offense(request, :uri)
+        add_offense(request.smart_path, request, :uri)
       end
     end
   end
