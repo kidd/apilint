@@ -1,4 +1,4 @@
 module Apilint
-  Request = Struct.new(:uri, :method, :headers) do
+  Request = Struct.new(:host, :uri, :method, :headers) do
   end
 end
