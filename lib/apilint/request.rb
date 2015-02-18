@@ -8,5 +8,12 @@ module Apilint
       uri =~ /\.(json|xml)(?:\?|$)/
       $1 || "unknown"
     end
+
+    %w(get post put delete patch).each do |meth|
+      define_method("#{meth}?") do
+        method == meth.upcase
+      end
+    end
+
   end
 end
