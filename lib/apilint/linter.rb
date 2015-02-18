@@ -1,8 +1,15 @@
-require 'apilint/offense'
-
 module Apilint
   class Linter
     attr_accessor :offenses
+    @all = []
+
+    def self.all
+      @all
+    end
+
+    def self.inherited(subclass)
+      @all << subclass
+    end
 
     def initialize
       @offenses = []
