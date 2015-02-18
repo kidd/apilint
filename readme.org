@@ -1,3 +1,18 @@
+#+TITLE: Apilint
+#+DATE: <2015-02-18 Wed>
+#+AUTHOR: Raimon Grau
+#+EMAIL: raimonster@gmail.com
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:nil arch:headline
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+#+OPTIONS: e:t email:nil f:t inline:t num:t p:nil pri:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:t todo:t |:t
+#+CREATOR: Emacs 25.0.50.1 (Org mode 8.2.10)
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+
 * Modules
 ** Parser/fetcher requests-responses
    IN: log? traffic
@@ -16,46 +31,48 @@
 ** Request
    - path
 ** Response
-** Check
-*** Individuals Request
-    - [[file:http-api-design.md::####%20Return%20appropriate%20status%20codes][Return appropriate status codes]]
-    - [[file:http-api-design.md::####%20Provide%20full%20resources%20where%20available][Provide full resources on 200 and 201 in PUT PATCH & DELETE but not on 202]]
-    - [[file:http-api-design.md::####%20Accept%20serialized%20JSON%20in%20request%20bodies][Accept json in post bodies instead of form-encoded]]
-    - [[file:http-api-design.md::####%20Downcase%20paths%20and%20attributes][Downcase paths]]
-    - [[file:http-api-design.md::####%20Minimize%20path%20nesting][Minimize path nesting]]
-*** Individuals Response
-    - [[https://github.com/3scale/system/pull/3428][Provide resource UUID]]
-    - [[file:http-api-design.md::####%20Provide%20standard%20timestamps][Timestamps (created_at , updated_at)]]
-    - [[file:http-api-design.md::####%20Use%20UTC%20times%20formatted%20in%20ISO8601][UTC Timestamps]]
-    - [[file:http-api-design.md::####%20Nest%20foreign%20key%20relations][Nest foreign keys]]
-    - [[file:http-api-design.md::####%20Generate%20structured%20errors][Structured errors]]
-    - [[file:http-api-design.md::####%20Show%20rate%20limit%20status][Show ratelimit status]]
-    - [[file:http-api-design.md::####%20Keep%20JSON%20minified%20in%20all%20responses][Minified json]]
+** TODO Check [0/6]
+*** TODO Individuals Request [2/5]
+**** TODO [[file:http-api-design.md::####%20Return%20appropriate%20status%20codes][Return appropriate status codes]]
+**** TODO [[file:http-api-design.md::####%20Provide%20full%20resources%20where%20available][Provide full resources on 200 and 201 in PUT PATCH & DELETE but not on 202]]
+**** TODO [[file:http-api-design.md::####%20Accept%20serialized%20JSON%20in%20request%20bodies][Accept json in post bodies instead of form-encoded]]
+**** DONE [[file:http-api-design.md::####%20Downcase%20paths%20and%20attributes][Downcase paths]]
+     CLOSED: [2015-02-18 Wed 21:24]
+**** DONE [[file:http-api-design.md::####%20Minimize%20path%20nesting][Minimize path nesting]]
+     CLOSED: [2015-02-18 Wed 21:24]
+*** TODO Individuals Response [2/8]
+**** TODO [[https://github.com/3scale/system/pull/3428][Provide resource UUID]]
+**** TODO [[file:http-api-design.md::####%20Provide%20standard%20timestamps][Timestamps (created_at , updated_at)]]
+**** TODO [[file:http-api-design.md::####%20Use%20UTC%20times%20formatted%20in%20ISO8601][UTC Timestamps]]
+**** TODO [[file:http-api-design.md::####%20Nest%20foreign%20key%20relations][Nest foreign keys]]
+**** TODO [[file:http-api-design.md::####%20Generate%20structured%20errors][Structured errors]]
+**** TODO [[file:http-api-design.md::####%20Show%20rate%20limit%20status][Show ratelimit status]]
+**** DONE Return valid json
+     CLOSED: [2015-02-18 Wed 21:25]
+**** DONE [[file:http-api-design.md::####%20Keep%20JSON%20minified%20in%20all%20responses][Minified json]]
+     CLOSED: [2015-02-18 Wed 21:24]
 
-*** Globals (automatic)
-    - Versioning in headers
-    - Require secure connection
-    - Etags
-    - Request Id's for every call
-    - json/xml
+*** TODO Globals (automatic) [0/5]
+**** TODO Versioning in headers
+**** TODO Require secure connection
+**** TODO Etags
+**** TODO Request Id's for every call
+**** TODO json/xml
 
-*** Globals (manual)
-    - Human-readable docs
-    - API Stability. Production, development, beta.
+*** TODO Globals (manual) [0/2]
+**** TODO Human-readable docs
+**** TODO API Stability. Production, development, beta.
 
-*** Active checks
-    - Override POST with X-Override-Method: PATCH
-    - parameter 'fields' that says which fields are going to be returned
-    - Accept a parameter 'pretty' = true . to prettify
+*** TODO Active checks [0/3]
+**** TODO Override POST with X-Override-Method: PATCH
+**** TODO parameter 'fields' that says which fields are going to be returned
+**** TODO Accept a parameter 'pretty' = true . to prettify
 
-*** Advanced
-    - [[file:http-api-design.md::####%20Divide%20Large%20Responses%20Across%20Requests%20with%20Ranges][Divide large responses]]
-    - [[file:http-api-design.md::#####%20Resource%20names][Plurals vs singulars in resources]] (with )
-    - [[file:http-api-design.md::#####%20Actions][Actions in resources]]
-    - Check for Authentication headers
-
-
-* TODO Tasks [0/2]
-** TODO Configure linters
-   [[file:lib/apilint/lint/deep_path.rb::#%20TODO:%20Configure%20a%20prefix.%20Ex:%20:prefix%20%3D>%20'/admin/api/'][deep path]]
-** TODO
+*** TODO Advanced [0/4]
+**** TODO [[file:http-api-design.md::####%20Divide%20Large%20Responses%20Across%20Requests%20with%20Ranges][Divide large responses]]
+**** TODO [[file:http-api-design.md::#####%20Resource%20names][Plurals vs singulars in resources]] (with )
+**** TODO [[file:http-api-design.md::#####%20Actions][Actions in resources]]
+**** TODO Check for Authentication headers
+*** TODO Infrastructure [0/0]
+**** TODO Configure linters
+     [[file:lib/apilint/lint/deep_path.rb::#%20TODO:%20Configure%20a%20prefix.%20Ex:%20:prefix%20%3D>%20'/admin/api/'][deep path]]

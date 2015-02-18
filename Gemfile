@@ -11,6 +11,8 @@ gem 'rspec'
 
 
 gem 'json-minify'
+gem 'nokogiri'
+gem 'activesupport'
 
 # Specify your gem's dependencies in apilint.gemspec
 gemspec
