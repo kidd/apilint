@@ -22,6 +22,12 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+## Hacking
+
+To run the test suite:
+
+    bundle exec rake
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/apilint/fork )
