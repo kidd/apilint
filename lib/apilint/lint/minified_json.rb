@@ -6,6 +6,8 @@ module Apilint
     class MinifiedJson < Linter
       MSG = 'Extra whitespace adds needless response size to requests'
 
+      # WARN : Inconsistency here. JSON.minify('') => '', but
+      # JSON.parse('') spits an error
       def check(request, response)
         return if request.asked_format != 'json'
         begin

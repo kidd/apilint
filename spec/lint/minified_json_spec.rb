@@ -6,18 +6,27 @@ module Apilint
       describe '#check' do
         let(:req) { Apilint::Request.new('http://foo.com', '/foo/123.json') }
 
-        context 'with correctly minified json' do
+        context 'with empty response' do
           let(:lint) { MinifiedJson.new }
-          let(:resp) { Apilint::Response.new(200, [], "{}") }
+          let(:resp) { Apilint::Response.new(200, [], "") }
 
           before { lint.check(req, resp) }
-
           it "should not add an offense" do
             expect(lint.offenses).to be_empty
           end
         end
 
-        context 'with invalid uri path' do
+        context 'with correctly minified json' do
+          let(:lint) { MinifiedJson.new }
+          let(:resp) { Apilint::Response.new(200, [], "{}") }
+
+          before { lint.check(req, resp) }
+          it "should not add an offense" do
+            expect(lint.offenses).to be_empty
+          end
+        end
+
+        context 'with bigger json than needed' do
           let(:resp) { Apilint::Response.new(200, [], "{   }") }
           let(:lint) { MinifiedJson.new }
 
