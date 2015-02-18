@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.3'
+ruby ENV.fetch('CUSTOM_RUBY_VERSION', '2.1.3')
 
 gem 'thor'
 gem 'pry'
