@@ -27,7 +27,7 @@ module Apilint
       requests.each do |request, response|
         offenses = inspect_request(request, response)
         reporter.report(offenses)
-#        all_passed = offenses.empty?
+        all_passed &&= offenses.empty?
       end
 
       all_passed
