@@ -8,5 +8,9 @@ gem 'pry-byebug'
 gem 'pry-doc'
 gem 'rspec'
 
+
+
+gem 'json-minify'
+
 # Specify your gem's dependencies in apilint.gemspec
 gemspec

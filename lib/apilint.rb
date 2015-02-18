@@ -9,3 +9,5 @@ require 'apilint/reporter'
 
 require 'apilint/lint/downcase_path'
 require 'apilint/lint/deep_path'
+require 'apilint/lint/minified_json'
+require 'apilint/lint/valid_json'

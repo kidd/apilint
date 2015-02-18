@@ -53,3 +53,9 @@
     - [[file:http-api-design.md::#####%20Resource%20names][Plurals vs singulars in resources]] (with )
     - [[file:http-api-design.md::#####%20Actions][Actions in resources]]
     - Check for Authentication headers
+
+
+* TODO Tasks [0/2]
+** TODO Configure linters
+   [[file:lib/apilint/lint/deep_path.rb::#%20TODO:%20Configure%20a%20prefix.%20Ex:%20:prefix%20%3D>%20'/admin/api/'][deep path]]
+** TODO
