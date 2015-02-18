@@ -8,3 +8,4 @@ require 'apilint/offense'
 require 'apilint/reporter'
 
 require 'apilint/lint/downcase_path'
+require 'apilint/lint/deep_path'
