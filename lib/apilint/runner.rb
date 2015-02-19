@@ -40,7 +40,8 @@ module Apilint
 
     def inspect_request(request, response)
       Linter.all.each_with_object([]) do |lint_klass, offenses|
-        lint = lint_klass.new
+        lint = lint_klass.new(@config)
+        next unless lint.enabled?
         lint.check(request, response)
 
         offenses.concat(lint.offenses)

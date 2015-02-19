@@ -11,7 +11,8 @@ module Apilint
       @all << subclass
     end
 
-    def initialize
+    def initialize(config = nil)
+      @config = config || Config.new
       @offenses = []
     end
 
@@ -33,6 +34,11 @@ module Apilint
 
     def message
       self.class::MSG
+    end
+
+    def enabled?
+      lint_config = @config.for_lint(lint_name)
+      lint_config && lint_config['Enabled']
     end
   end
 end
