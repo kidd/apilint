@@ -23,6 +23,14 @@ module Apilint
       offenses << Offense.new(smart_path, obj, attr, message)
     end
 
+    def self.lint_name
+      name.to_s.split("::").last
+    end
+
+    def lint_name
+      self.class.lint_name
+    end
+
     def message
       self.class::MSG
     end
