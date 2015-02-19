@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'apilint/cli'
+
+Apilint::CLI.start
