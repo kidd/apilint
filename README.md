@@ -20,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Right now, the gem usage is very basic. You can execute it with:
+
+    bundle exec bin/apilint check YOUR-REQUESTS-FILE-PATH
 
 ## Hacking
 
