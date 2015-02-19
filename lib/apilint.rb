@@ -6,6 +6,7 @@ require 'apilint/runner'
 require 'apilint/linter'
 require 'apilint/offense'
 require 'apilint/reporter'
+require 'apilint/config'
 
 require 'apilint/lint/downcase_path'
 require 'apilint/lint/deep_path'

@@ -8,8 +8,9 @@ module Apilint
     end
 
     desc "check FILE", "Check FILE containing your API requests"
+    option :config_file, aliases: "-c"
     def check(file)
-      runner = Runner.new
+      runner = Runner.new(config_file: config_file)
       puts "Checking #{file}..."
       runner.run(file)
     end

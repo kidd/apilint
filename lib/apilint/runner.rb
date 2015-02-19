@@ -2,7 +2,12 @@ require 'json'
 
 module Apilint
   class Runner
-    def initialize
+    def initialize(opts = {})
+      if opts[:config_file]
+        @config = Config.load_from_file(opts[:config_file])
+      else
+        @config = Config.new
+      end
     end
 
     def run(file)
