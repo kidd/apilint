@@ -1,3 +1,5 @@
+require 'active_support/inflector'
+
 module Apilint
   Request = Struct.new(:host, :uri, :method, :headers) do
     def smart_path
@@ -14,6 +16,13 @@ module Apilint
         method == meth.upcase
       end
     end
+
+
+    # def is_index?
+    #   parts = uri.split('/')
+    #   last_elem = parts[-1].split('.')[0]
+    #   ActiveSupport::Inflector.pluralize(last_elem) == last_elem
+    # end
 
   end
 end
