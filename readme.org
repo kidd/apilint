@@ -53,6 +53,7 @@
      CLOSED: [2015-02-18 Wed 21:24]
 
 *** TODO Globals (automatic) [0/5]
+**** TODO Versioning (in path ok, in headers perfect)
 **** TODO Versioning in headers
 **** TODO Require secure connection
 **** TODO Etags
