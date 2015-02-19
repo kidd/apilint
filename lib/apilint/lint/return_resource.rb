@@ -27,9 +27,9 @@ module Apilint
         if r.class ==  Array
           r.empty? or r.any?{|x| x['id'] }
         elsif r.class == Hash
-          r.empty? or r['id'] or r.any?{|x| x['id'] }
+          r.empty? or r['id'] or r.any?{|k,x| r[k]['id'] }
         else
-          raise "just a number? bad guy"
+          # single value? ok
         end
       end
 
