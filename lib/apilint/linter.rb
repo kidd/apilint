@@ -37,7 +37,7 @@ module Apilint
     end
 
     def enabled?
-      lint_config = @config.for_lint(lint_name) || {}
+      lint_config = @config.for_lint(lint_name)
       !(lint_config['Enabled'] == false)
     end
   end

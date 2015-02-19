@@ -9,7 +9,7 @@ module Apilint
     end
 
     def for_lint(lint_name)
-      self[lint_name]
+      self[lint_name] || {}
     end
 
     def self.load_from_file(path)
