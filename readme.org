@@ -25,7 +25,7 @@
    OUT: [Request] with attached errors
 ** Outputter
    IN: [Request]
-   OUT: errors grouped by smart_path
+   OUT: errors grouped by smart_path or lint type
 
 * Classes
 ** Request
