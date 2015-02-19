@@ -6,9 +6,9 @@ module Apilint
 
       def check(request, response)
         format = request.asked_format
-        good_practices = { 200 => ->(){ contains_resource(response, format) }  ,
-                           201 => ->(){ contains_resource(response, format) }  ,
-                           202 => ->(){ !contains_resource(response, format)}  ,
+        good_practices = { 200 => ->(){ contains_resource(response.parse_body(format)) }  ,
+                           201 => ->(){ contains_resource(response.parse_body(format)) }  ,
+                           202 => ->(){ !contains_resource(response.parse_body(format))}  ,
                            nil => ->(){ true }
                          }
 
@@ -22,12 +22,13 @@ module Apilint
 
       private
 
-      def contains_resource(res, format)
-        r =  res.parse_body(format)
+      def contains_resource(r)
         if r.class ==  Array
           r.empty? or r.any?{|x| x['id'] }
         elsif r.class == Hash
-          r.empty? or r['id'] or r.any?{|k,x| r[k]['id'] }
+          require 'pry'
+          binding.pry unless $go
+          r.empty? or r['id'] or r.any?{|k,x| contains_resource(r[k]) }
         else
           # single value? ok
         end
