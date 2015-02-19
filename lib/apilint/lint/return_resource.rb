@@ -26,14 +26,11 @@ module Apilint
         if r.class ==  Array
           r.empty? or r.any?{|x| x['id'] }
         elsif r.class == Hash
-          require 'pry'
-          binding.pry unless $go
           r.empty? or r['id'] or r.any?{|k,x| contains_resource(r[k]) }
         else
           # single value? ok
         end
       end
-
     end
   end
 end
