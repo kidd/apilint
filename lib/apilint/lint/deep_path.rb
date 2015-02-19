@@ -6,8 +6,19 @@ module Apilint
       # TODO: Configure a prefix. Ex: :prefix => '/admin/api/'
 
       def check(request, _response)
-        return if request.uri.split("/").size <= 3
-        add_offense(request.smart_path, request, :uri)
+        lint_config = @config.for_lint(lint_name)
+        max_depth   = lint_config['MaxDepth'] || 3
+        prefix      = lint_config['Prefix']
+
+        if prefix
+          uri = request.uri.gsub(/^#{prefix}/, '')
+        else
+          uri = request.uri
+        end
+
+        if uri.split("/").size > max_depth
+          add_offense(request.smart_path, request, :uri)
+        end
       end
     end
   end
