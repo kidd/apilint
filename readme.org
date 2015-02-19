@@ -76,6 +76,6 @@
 **** TODO [[file:http-api-design.md::#####%20Resource%20names][Plurals vs singulars in resources]] (with )
 **** TODO [[file:http-api-design.md::#####%20Actions][Actions in resources]]
 **** TODO Check for Authentication headers
-*** TODO Infrastructure [0/0]
-**** TODO Configure linters
+*** TODO Infrastructure [1/1]
+**** DONE Configure linters
      [[file:lib/apilint/lint/deep_path.rb::#%20TODO:%20Configure%20a%20prefix.%20Ex:%20:prefix%20%3D>%20'/admin/api/'][deep path]]
