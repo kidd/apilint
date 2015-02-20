@@ -20,7 +20,7 @@ module Apilint
         offenses_same_type.group_by{|o| o.smart_path }.each do |offense_smart_path, offenses_same_smart_path|
           puts "\n\t - #{offense_smart_path}"
           offenses_same_smart_path.each do |offense|
-            puts "\t\t #{offense.path}: \n\t\tOffense in #{offense.attr}: \"#{offense.obj.send(offense.attr)}\""
+            puts "\t\t URI: \"#{offense.path}\": \n\t\tOffense in #{offense.attr}: \"#{offense.obj.send(offense.attr)}\""
           end
         end
       end
