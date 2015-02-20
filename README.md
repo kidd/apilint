@@ -12,7 +12,27 @@ Install it yourself as:
 
 Right now, the gem usage is very basic. You can execute it with:
 
-    bundle exec bin/apilint check YOUR-REQUESTS-FILE-PATH
+    bundle exec bin/apilint check YOUR-REQUESTS-FILE-PATH [-c configfile]
+
+## Configuring
+
+Currently there are this linters with the following configurations:
+
+* deep_path.rb
+
+  - MaxDepth: Longest depth accepted without warning.
+  - Prefix: Prefix that should be ignored when counting nesting.
+
+* downcase_path.rb
+* include_timestamps.rb
+* minified_json.rb
+* rate_limit_status.rb
+* return_resource.rb
+* valid_json.rb
+
+All plugins support the option "Enabled", which defaults to true.
+
+[example_config.yml](config.yml)
 
 ## Hacking
 

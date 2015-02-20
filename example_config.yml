@@ -1,0 +1,10 @@
+DowncasePath:
+  Enabled: true
+
+DeepPath:
+  Enabled: true
+  Prefix: '/admin/api'
+  MaxDepth: 3
+
+RateLimitStatus:
+  Enabled: false
