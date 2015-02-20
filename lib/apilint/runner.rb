@@ -27,6 +27,7 @@ module Apilint
 
     def inspect_requests(requests)
       reporter   = Reporter.create_reporter(OffenseBasedRep)
+      reporter.num_requests = requests.size
       all_passed = true
 
       requests.each do |request, response|

@@ -1,7 +1,10 @@
 module Apilint
   class OffenseBasedRep < Reporter
+    attr_accessor :num_requests
+
     def initialize
       @offenses = []
+      @num_requests = 0
     end
 
     attr_accessor :offenses
@@ -25,7 +28,7 @@ module Apilint
         end
       end
 
+      puts "\n--> #{num_requests} requests inspected, #{offenses.size} offenses detected"
     end
-
   end
 end
