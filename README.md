@@ -32,7 +32,7 @@ Currently there are this linters with the following configurations:
 
 All plugins support the option "Enabled", which defaults to true.
 
-[example_config.yml](config.yml)
+[example_config.yml](example_config.yml)
 
 ## Hacking
 
