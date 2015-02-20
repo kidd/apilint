@@ -3,8 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>cAPItan</title>
-<meta name="author" content="(Raimon Grau & Toni Reina)"/>
+<title></title>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
 
@@ -26,24 +25,31 @@
 <div class="reveal">
 <div class="slides">
 <section>
-<h1>cAPItan</h1>
-<h2>Raimon Grau &amp; Toni Reina</h2>
-<h2><a href="mailto:rgrau@3scale.net & toni@3scale.net">rgrau@3scale.net & toni@3scale.net</a></h2>
-<h2><span class="timestamp-wrapper"><span class="timestamp">&lt;2015-02-20 Fri&gt;</span></span></h2>
+<h1></h1>
+<h2></h2>
+<h2><a href="mailto:@rai & toni">@rai & toni</a></h2>
+<h2>present&#x2026;</h2>
 </section>
 
 <section>
 <section id="sec-1" >
 
-<h2><span class="section-number-2">1</span> Revolution</h2>
-<a href="adoption.png"><img src="file:///home/rgrau/programmingStuff/apilint/docs/presentation/adoption.png" alt="adoption.png" /></a>
+<h2>TENERIFE HAACKING TEAM</h2>
+<img src="capitan-canario.png" alt="capitan-canario.png" />
 </section>
-
 </section>
 <section>
 <section id="sec-2" >
 
-<h2><span class="section-number-2">2</span> But this comes at a cost&#x2026;</h2>
+<h2>Innovation</h2>
+<a href="adoption.png"><img src="adoption.png" alt="adoption.png" /></a>
+</section>
+
+</section>
+<section>
+<section id="sec-3" >
+
+<h2>But this comes at a cost&#x2026;</h2>
 <ul class="org-ul">
 <li>Explosion of adoption
 </li>
@@ -58,24 +64,24 @@
 
 </section>
 <section>
-<section id="sec-3" >
-
-<h2><span class="section-number-2">3</span> Ruby</h2>
-<a href="ruby-code.png"><img src="file:///home/rgrau/programmingStuff/apilint/docs/presentation/ruby-code.png" alt="ruby-code.png" /></a>
-</section>
-
-</section>
-<section>
 <section id="sec-4" >
 
-<h2><span class="section-number-2">4</span> With Apis</h2>
+<h2>Ruby</h2>
+<a href="ruby-code.png"><img src="ruby-code.png" alt="ruby-code.png" /></a>
 </section>
 
 </section>
 <section>
 <section id="sec-5" >
 
-<h2><span class="section-number-2">5</span> Convergence</h2>
+<h2>With Apis</h2>
+</section>
+
+</section>
+<section>
+<section id="sec-6" >
+
+<h2>Convergence</h2>
 <ul class="org-ul">
 <li>Standarization of styles.
 </li>
@@ -88,9 +94,9 @@
 
 </section>
 <section>
-<section id="sec-6" >
+<section id="sec-7" >
 
-<h2><span class="section-number-2">6</span> We're there (kinda)</h2>
+<h2>We're there (kinda)</h2>
 <ul class="org-ul">
 <li>Ruby has its own style guide (powered by thoughtbot)
 </li>
@@ -107,28 +113,35 @@
 
 </section>
 <section>
-<section id="sec-7" >
+<section id="sec-8" >
 
-<h2><span class="section-number-2">7</span> And we got smarter&#x2026;</h2>
+<h2>And we got smarter&#x2026;</h2>
 <p>
 So we made it automatic, so apps can check code looking for code red
 flags.
 </p>
 <ul class="org-ul">
-<li>Rubocop
+<li>Rubocop: Automatic Ruby style checking tool.
+<img src="rubocop-info.png" alt="rubocop-info.png" />
 </li>
 </ul>
-<ul class="org-ul">
-<li>But no checker for APIs
-</li>
-</ul>
+</section>
+</section>
+<section>
+<section id="sec-9" >
+
+<h2>EH!!</h2>
+<p>
+<img src="rubocop.png" alt="rubocop.png" />
+<img src="rubocop-stars.png" alt="rubocop-stars.png" />
+</p>
 </section>
 
 </section>
 <section>
-<section id="sec-8" >
+<section id="sec-10" >
 
-<h2><span class="section-number-2">8</span> Sooo&#x2026;.</h2>
+<h2>BUT! no checker for APIs&#x2026;</h2>
 <p>
 Until now&#x2026;.
 </p>
@@ -136,22 +149,180 @@ Until now&#x2026;.
 
 </section>
 <section>
-<section id="sec-9" >
+<section id="sec-11" >
 
-<h2><span class="section-number-2">9</span> cAPItan Canario</h2>
+<h2>Apilint (Zapp Brannigan)</h2>
+<p>
+Given a collection of request-response pairs, automatically
+detects red flags or warns about bad practices on that API.
+</p>
+<ul class="org-ul">
+<li>Ways to collect that data:
+<ul class="org-ul">
+<li>Apitools
+</li>
+<li>Apicast
+</li>
+<li>Swagger spec
+</li>
+<li>Ruby Rack Middleware
+</li>
+<li>rspec_api_documentation
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="sec-12" >
 
+<h2>Apilint (Zapp Brannigan)</h2>
+<p>
+Lints are the individual checkers for each style element.
+</p>
+<ul class="org-ul">
+<li>It's easy to create your own lints
+<img src="lint-example.png" alt="lint-example.png" />
+</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="sec-13" >
+
+<h2>Apilint (Zapp Brannigan)</h2>
+<ul class="org-ul">
+<li>Which are configurable, and also activable/deactivable
+<img src="config-example.png" alt="config-example.png" />
+</li>
+</ul>
 </section>
 
 </section>
 <section>
-<section id="sec-10" >
+<section id="sec-14" >
 
-<h2><span class="section-number-2">10</span> (codename apilint)</h2>
+<h2>Pray for the Demo Gods</h2>
 <ul class="org-ul">
-<li>Given a collection of request-response pairs, automatically
-detects red flags or warns about bad practices on that API.
+<li>Command line interface:
+<ul class="org-ul">
+<li>Usage:
+<a href="ruby-code.png"><img src="apilint-cmd.png" alt="apilint-cmd.png" /></a>
 </li>
-<li>Lints are the individual checkers for each style element
+<li>Help:
+<img src="apilint-help-cmd.png" alt="apilint-help-cmd.png" />
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="sec-15" >
+
+<h2>Pray for the Demo Gods</h2>
+<ul class="org-ul">
+<li>Command line interface:
+<ul class="org-ul">
+<li>Results by Lint type:
+<img src="apilint-results-1.png" alt="apilint-results-1.png" />
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="sec-16" >
+
+<h2>Pray for the Demo Gods</h2>
+<ul class="org-ul">
+<li>Command line interface:
+<ul class="org-ul">
+<li>Results by Lint type:
+<img src="apilint-results2.png" alt="apilint-results2.png" />
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="sec-17" >
+
+<h2>Pray for the Demo Gods</h2>
+<ul class="org-ul">
+<li>Command line interface:
+<ul class="org-ul">
+<li>Results by Lint type:
+<img src="apilint-results3.png" alt="apilint-results3.png" />
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="sec-18" >
+
+<h2>Pray for the Demo Gods</h2>
+<ul class="org-ul">
+<li>Command line interface:
+<ul class="org-ul">
+<li>Total number of results:
+<img src="apilint-results-total.png" alt="apilint-results-total.png" />
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="sec-19" >
+
+<h2>Integrations (future work)</h2>
+<ul class="org-ul">
+<li>3SCALE API DOCS PROXY
+</li>
+<li>3SCALE REQUEST LOGS
+</li>
+<li>APINATOR ?
+</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="sec-20" >
+
+<h2>Integrations (future work)</h2>
+<ul class="org-ul">
+<li>imagine&#x2026;
+</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="sec-21" >
+
+<h2>Integrations (future work)</h2>
+<ul class="org-ul">
+<li>imagine&#x2026;
+</li>
+</ul>
+</section>
+
+</section>
+<section>
+<section id="sec-22" >
+
+<h2>THANKS</h2>
+<ul class="org-ul">
+<li><a href="http://kidd.github.io/apilint">http://kidd.github.io/apilint</a>  [WEB]
+</li>
+<li><a href="http://github.com/kidd/apilint">http://github.com/kidd/apilint</a> [GH]
+</li>
+<li>Q &amp; A
 </li>
 </ul>
 </section>
@@ -170,7 +341,7 @@ Reveal.initialize({
 controls: true,
 progress: true,
 history: false,
-center: true,
+center: false,
 slideNumber: true,
 rollingLinks: false,
 keyboard: true,

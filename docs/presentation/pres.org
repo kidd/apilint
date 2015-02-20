@@ -1,10 +1,10 @@
-#+TITLE: cAPItan
-#+DATE: <2015-02-20 Fri>
-#+AUTHOR: Raimon Grau & Toni Reina
-#+EMAIL: rgrau@3scale.net & toni@3scale.net
-#+OPTIONS: reveal_center:nil
+#+TITLE: 
+#+DATE: present...
+#+AUTHOR: 
+#+EMAIL: @rai & toni
+#+OPTIONS: reveal_center:nil timestamp:nil
 #+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:nil arch:headline
-#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:nil
 #+OPTIONS: e:t email:nil f:t inline:t num:nil p:nil pri:nil stat:t
 #+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:nil todo:t |:t
 #+CREATOR: Emacs 25.0.50.1 (Org mode 8.2.10)
@@ -15,7 +15,9 @@
 #+SELECT_TAGS: export
 #+REVEAL_THEME: black
 
-* Revolution
+* TENERIFE HAACKING TEAM
+  file:capitan-canario.png
+* Innovation
   [[file:adoption.png][file:adoption.png]]
 
 * But this comes at a cost...
@@ -46,26 +48,64 @@
 * And we got smarter...
   So we made it automatic, so apps can check code looking for code red
   flags.
-  - Rubocop
-  # TODO github stars
+  - Rubocop: Automatic Ruby style checking tool.
+    file:rubocop-info.png
+* EH!!
+  file:rubocop.png
+  file:rubocop-stars.png
 
-  - But no checker for APIs
-
-* Sooo....
+* BUT! no checker for APIs...
   Until now....
 
-* cAPItan Canario
-  # TODO foto capitan canario
-
-* (codename apilint)
-  - Given a collection of request-response pairs, automatically
-    detects red flags or warns about bad practices on that API.
-    - Apitools, Apicast, Rack Middleware, swagger,
-      rspec_api_documentation...
-  - Lints are the individual checkers for each style element.
-    - Which are configurable, and also activable/deactivable
+* Apilint (Zapp Brannigan)
+  Given a collection of request-response pairs, automatically
+  detects red flags or warns about bad practices on that API.
+  - Ways to collect that data:
+    - Apitools
+    - Apicast
+    - Swagger spec
+    - Ruby Rack Middleware
+    - rspec_api_documentation
+* Apilint (Zapp Brannigan)
+  Lints are the individual checkers for each style element.
   - It's easy to create your own lints
+    file:lint-example.png
+* Apilint (Zapp Brannigan)
+  - Which are configurable, and also activable/deactivable
+    file:config-example.png
 
 * Pray for the Demo Gods
+  - Command line interface:
+    - Usage:
+      [[file:ruby-code.png][file:apilint-cmd.png]]
+    - Help:
+      file:apilint-help-cmd.png
+* Pray for the Demo Gods
+  - Command line interface:
+    - Results by Lint type:
+      file:apilint-results-1.png
+* Pray for the Demo Gods
+  - Command line interface:
+    - Results by Lint type:
+      file:apilint-results2.png
+* Pray for the Demo Gods
+  - Command line interface:
+    - Results by Lint type:
+      file:apilint-results3.png
+* Pray for the Demo Gods
+  - Command line interface:
+    - Total number of results:
+      file:apilint-results-total.png
+* Integrations (future work)
+  - 3SCALE API DOCS PROXY
+  - 3SCALE REQUEST LOGS
+  - APINATOR ?
+* Integrations (future work)
+  - imagine...
+* Integrations (future work)
+  - imagine...
 
-* Q & A
+* THANKS
+  - http://kidd.github.io/apilint  [WEB]
+  - http://github.com/kidd/apilint [GH]
+  - Q & A
