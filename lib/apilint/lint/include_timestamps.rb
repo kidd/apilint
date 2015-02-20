@@ -10,7 +10,7 @@ module Apilint
         return if body.nil? || body.empty?
 
         valid = contains_attributes(body, ['created_at', 'updated_at'])
-        add_offense(request.smart_path, response, :body) unless valid
+        add_offense(request, response, :body) unless valid
       end
     end
   end
