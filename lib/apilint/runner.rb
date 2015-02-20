@@ -26,7 +26,7 @@ module Apilint
     end
 
     def inspect_requests(requests)
-      reporter   = Reporter.new
+      reporter   = Reporter.create_reporter(OffenseBasedRep)
       all_passed = true
 
       requests.each do |request, response|
@@ -35,6 +35,7 @@ module Apilint
         all_passed &&= offenses.empty?
       end
 
+      reporter.flush
       all_passed
     end
 
