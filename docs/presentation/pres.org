@@ -59,4 +59,12 @@
 * (codename apilint)
   - Given a collection of request-response pairs, automatically
     detects red flags or warns about bad practices on that API.
+    - Apitools, Apicast, Rack Middleware, swagger,
+      rspec_api_documentation...
   - Lints are the individual checkers for each style element.
+    - Which are configurable, and also activable/deactivable
+  - It's easy to create your own lints
+
+* Pray for the Demo Gods
+
+* Q & A
