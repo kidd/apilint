@@ -15,7 +15,7 @@ module Apilint
         begin
           return Hash.from_xml(body)
         rescue
-          return false
+          return nil
         end
       end
     end
