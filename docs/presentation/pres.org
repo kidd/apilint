@@ -1,7 +1,7 @@
 #+TITLE: 
-#+DATE: present...
-#+AUTHOR: 
-#+EMAIL: @rai & toni
+#+DATE: as...
+#+AUTHOR: [3SCALE HACKATON 2015]
+#+EMAIL: @rai & @toni
 #+OPTIONS: reveal_center:nil timestamp:nil
 #+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:nil arch:headline
 #+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:nil
@@ -17,6 +17,7 @@
 
 * TENERIFE HAACKING TEAM
   file:capitan-canario.png
+  presenting:
 * Innovation
   [[file:adoption.png][file:adoption.png]]
 
@@ -26,16 +27,35 @@
   - Adopters of different knowledge
   - Not Invented Here syndrome
 
-* Ruby
+* Ruby drama
+  We illustrate our examples with Ruby because it's our main language
+  - Indentation: Spaces vs Tabs; Two spaces vs Four spaces
+  - Parens or no parens
+  - or and || && operators 
+    - HOLA: @michal, @wojciech, @alex :-)
+  - limit chars per line (80chars)
+  - Align parameters
+  - negative conditions
+  - etc
 
-    [[file:ruby-code.png][file:ruby-code.png]]
-
-* With Apis
+* API drama
+  - Different formats: XML vs JSON
+  - REST or NO REST
+  - Versioning
+    - No versioning
+    - Version in uri path
+    - Version in headers
+  - Backwards compatibilty
+  - Different ways to represent resources
+  - URI paths
+  - ADD HERE YOUR PERSONAL NIGHTMARE
 
 * Convergence
   - Standarization of styles.
   - Follow best practices
   - Recognized authorities
+  - Enforced laws
+  - Official commitee
 
 * We're there (kinda)
   - Ruby has its own style guide (powered by thoughtbot)
@@ -43,7 +63,6 @@
   - js has it too (airbnb)
   - Scientific publications have it too
   - APIs have it too (provided by heroku, but still settling)
-# TODO github stars
 
 * And we got smarter...
   So we made it automatic, so apps can check code looking for code red
@@ -53,14 +72,16 @@
 * EH!!
   file:rubocop.png
   file:rubocop-stars.png
-
 * BUT! no checker for APIs...
   Until now....
-
 * Apilint (Zapp Brannigan)
   Given a collection of request-response pairs, automatically
   detects red flags or warns about bad practices on that API.
-  - Ways to collect that data:
+
+  𝄞 𝄞 𝄞 It's got to beeeeeee perfect 𝄞 𝄞 𝄞
+
+* Apilint (Zapp Branningan)
+  Ways to collect HTTP requests & responses:
     - Apitools
     - Apicast
     - Swagger spec
@@ -101,11 +122,20 @@
   - 3SCALE REQUEST LOGS
   - APINATOR ?
 * Integrations (future work)
-  - imagine...
+  - imagine:
+    - 3SCALE widget/badges with info about your API quality
+      file:codeclimate-badge.png
 * Integrations (future work)
-  - imagine...
+  - imagine:
+    - 3SCALE section (ala codeclimate) with general recommendations about API design and info
+      about your real traffic API
+      file:codeclimate-results.png
 
 * THANKS
+  :PROPERTIES: 
+  :reveal_background: ./bg.jpg
+  :reveal_background_trans: slide
+    :END:
   - http://kidd.github.io/apilint  [WEB]
   - http://github.com/kidd/apilint [GH]
   - Q & A
