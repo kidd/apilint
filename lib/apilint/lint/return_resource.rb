@@ -15,7 +15,7 @@ module Apilint
         if good_practices[response.code].call  #return true if it contains resource
           #everything is fine
         else
-          add_offense(request.smart_path, response, :body)
+          add_offense(request, response, :body)
         end
 
       end

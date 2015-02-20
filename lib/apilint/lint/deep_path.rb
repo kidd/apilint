@@ -17,7 +17,7 @@ module Apilint
         end
 
         if uri.split("/").size > max_depth
-          add_offense(request.smart_path, request, :uri)
+          add_offense(request, request, :uri)
         end
       end
     end

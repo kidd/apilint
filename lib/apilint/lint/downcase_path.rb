@@ -6,7 +6,7 @@ hostnames'
 
       def check(request, response)
         if request.uri =~ /[A-Z]/
-          add_offense(request.smart_path, request, :uri)
+          add_offense(request, request, :uri)
         end
       end
     end

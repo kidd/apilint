@@ -5,7 +5,7 @@ module Apilint
 
       def check(request, response)
         return if response.headers.any? { |k, v| k =~ /^(X-RateLimit|RateLimit)/ }
-        add_offense(request.smart_path, response, :headers)
+        add_offense(request, response, :headers)
       end
     end
   end

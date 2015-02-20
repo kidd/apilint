@@ -20,8 +20,8 @@ module Apilint
       raise "foo"
     end
 
-    def add_offense(smart_path, obj, attr)
-      offenses << Offense.new(smart_path, obj, attr, message)
+    def add_offense(request, obj, attr)
+      offenses << Offense.new(request.smart_path, request.uri, obj, attr, message, lint_name)
     end
 
     def self.lint_name
