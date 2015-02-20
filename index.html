@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Apilint : 𝄞 𝄞 𝄞  It&#39;s got to beeeeeee perfect  𝄞 𝄞 𝄞 ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Apilint</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/kidd/apilint">View on GitHub</a>
+
+          <h1 id="project_title">Apilint</h1>
+          <h2 id="project_tagline">𝄞 𝄞 𝄞  It&#39;s got to beeeeeee perfect  𝄞 𝄞 𝄞 </h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/kidd/apilint/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/kidd/apilint/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="apilint" class="anchor" href="#apilint" aria-hidden="true"><span class="octicon octicon-link"></span></a>Apilint</h1>
+
+<p>TODO: Write a gem description</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Install it yourself as:</p>
+
+<pre><code>$ gem install apilint
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Right now, the gem usage is very basic. You can execute it with:</p>
+
+<pre><code>bundle exec bin/apilint check YOUR-REQUESTS-FILE-PATH [-c configfile]
+</code></pre>
+
+<h2>
+<a id="configuring" class="anchor" href="#configuring" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuring</h2>
+
+<p>Currently there are this linters with the following configurations:</p>
+
+<ul>
+<li>
+<p>deep_path.rb</p>
+
+<ul>
+<li>MaxDepth: Longest depth accepted without warning.</li>
+<li>Prefix: Prefix that should be ignored when counting nesting.</li>
+</ul>
+</li>
+<li><p>downcase_path.rb</p></li>
+<li>include_timestamps.rb</li>
+<li>minified_json.rb</li>
+<li>rate_limit_status.rb</li>
+<li>return_resource.rb</li>
+<li>valid_json.rb</li>
+</ul>
+
+<p>All plugins support the option "Enabled", which defaults to true.</p>
+
+<p><a href="example_config.yml">example_config.yml</a></p>
+
+<h2>
+<a id="hacking" class="anchor" href="#hacking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacking</h2>
+
+<p>To run the test suite:</p>
+
+<pre><code>bundle exec rake
+</code></pre>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it ( <a href="https://github.com/%5Bmy-github-username%5D/apilint/fork">https://github.com/[my-github-username]/apilint/fork</a> )</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create a new Pull Request</li>
+</ol>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Apilint maintained by <a href="https://github.com/kidd">kidd</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
